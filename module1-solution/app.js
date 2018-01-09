@@ -7,11 +7,14 @@ function LunchCheckController($scope) {
     $scope.message = "";
 $scope.CheckTooMuch = function(){    
     var noDishes = $scope.dishes.split(',')
-    if (noDishes.length <= 3){
-        $scope.message = "Enjoy";
+    if (noDishes == 0){
+        $scope.message = "Please enter data first";
+    }
+    else if (noDishes.length > 3){
+       $scope.message = "Too much!";
     }
     else {
-        $scope.message = "Too much!";
+        $scope.message="Enjoy";
     }
 }    
 };    
