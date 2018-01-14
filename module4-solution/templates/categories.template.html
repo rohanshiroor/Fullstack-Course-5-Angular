@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="../styles/styles.css">
+<link rel="stylesheet" href="../styles/bootstrap.min.css"> 
+<div>
+      <h1>List of Menu Categories</h1>
+      <ul>
+        <li ng-repeat="category in catctrl.categories">
+          (<a ui-sref="items({menuItem:category.short_name})">
+          {{ category.short_name }}</a>)
+          {{ category.name }}
+        </li>
+      </ul>
+      <a class="btn btn-primary btn-lg"  ui-sref="home" role="button">Home</a>
+</div>
