@@ -7,11 +7,11 @@ RoutesConfig.$inject = ['$stateProvider','$urlRouterProvider'];    function Rout
     $stateProvider
     .state('home',{
         url:'/',
-        templateUrl: '../templates/home.template.html'
+        templateUrl: "src/Menu/templates/home.template.html"
     })
     .state('categories',{
         url:'/categories',
-        templateUrl: '../templates/categories.template.html',
+        templateUrl: "src/Menu/templates/categories.template.html",
         controller: 'CategoryController as catctrl',
         resolve: {
         category: ['MenuDataService',function(MenuDataService){
@@ -21,7 +21,7 @@ RoutesConfig.$inject = ['$stateProvider','$urlRouterProvider'];    function Rout
     })
     .state('items',{
         url:'/items/{menuItem}',
-        templateUrl:"../templates/items.template.html",
+        templateUrl:"src/Menu/templates/items.template.html",
         controller:"ItemsController as itemctrl",
         resolve:{ 
             menuItems:['$stateParams','MenuDataService',function($stateParams,MenuDataService){
